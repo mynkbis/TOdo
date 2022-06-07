@@ -1,14 +1,14 @@
 import React from 'react'
 
 
-function SinglePage() {
+function SinglePage(props) {
   return (
     <div>Single page
     
     <div>
    
     </div>
-    <p></p>
+    <p>{props.userData}</p>
 
      </div>
 

@@ -6,7 +6,7 @@ import { BrowserRouter as Router,Routes, Route, Link, BrowserRouter } from 'reac
 import AddPage from './pages/AddPage';
 import ListPage from './pages/ListingPage';
 import SinglePage from './pages/SinglePage';
-import { UserDataProvider } from './context';
+import { userData, UserDataProvider } from './context';
 
 function App() {
 
@@ -18,9 +18,10 @@ function App() {
       <div className='mainBoxApp'> 
 <h5>ToDo</h5>
       <Routes>
-<Route exact path='/' element={<AddPage/>}/>
+<Route exact path='/' element={<AddPage />}/>
 <Route exact path='/listingPage' element={<ListPage/>}/>
-<Route exact path='/singlePage' element={<SinglePage/>}/>
+{/* <Route exact path='/listingPage/:data' element={<ListPage/>}/> */}
+<Route exact path='/singlePage' element={<SinglePage data={userData}/>}/>
      
 </Routes>
   </div>

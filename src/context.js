@@ -1,7 +1,7 @@
 import { createContext, React, useContext, useState } from "react";
 
-const userData=createContext(undefined);   // to query the context state
-const userDispatchData=createContext(undefined);  // to mutate coontext state
+const userData=createContext();   // to query the context state
+const userDispatchData=createContext();  // to mutate coontext state
 
 const UserDataProvider=({children})=>{
 
