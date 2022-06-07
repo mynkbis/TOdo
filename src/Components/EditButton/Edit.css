@@ -1,0 +1,16 @@
+
+
+.editButton>button{
+
+    background-color: green;
+    color: aliceblue;
+    border: 1px solid #fff;
+    border-radius: 5px;
+
+}
+
+.editButton>button:hover{
+    background-color: red;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
