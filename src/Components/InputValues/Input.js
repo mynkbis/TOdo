@@ -21,12 +21,7 @@ const HandleEvent=(e)=>{
     setItems(e.target.value)
   }
 
-const Handleboth=()=>{
-  HandleAdd();
-  
-}
-
-const HandleAdd=(e)=>{
+  const HandleAdd=(e)=>{
  // alert("added")
 //  localStorage.setItem("lists", JSON.stringify(items))
      e.preventDefault();
@@ -50,14 +45,6 @@ let navigate = useNavigate();
     }
 
 
-    // add data to local storage
-
-
-
-// localStorage.setItem("lastname", "Smith");
-
-
-
   return (
   <div className='fieldBox'>
   <form className='fieldBox'>
@@ -66,9 +53,9 @@ let navigate = useNavigate();
 
 
  {/* <li>{items}</li>  */}
- {data.map((itemval, id="name+1")=>{return <li key={id+1}>{itemval}</li>})}
+ {/* {data.map((itemval, id="name+1")=>{return <li key={id+1}>{itemval}</li>})} */}
 
- {data.map((itemval, index)=>{return <ListPage/>})}
+ {data.map((itemval, index)=>{return })}
  </form>
  <button onClick={routeChange}>Show List</button>
  
