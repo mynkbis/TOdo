@@ -5,8 +5,8 @@ function DeleteButton(props) {
 
   const HandleDelete=()=>{
     console.log("deleted")
-    alert ("deleted successfully")
-
+    // alert ("deleted successfully")
+    localStorage.clear();
     
   }
 

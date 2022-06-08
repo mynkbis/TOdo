@@ -55,7 +55,7 @@ let navigate = useNavigate();
  {/* <li>{items}</li>  */}
  {/* {data.map((itemval, id="name+1")=>{return <li key={id+1}>{itemval}</li>})} */}
 
- {data.map((itemval, index)=>{return })}
+ {data.map((itemval, index)=>{return <ListPage/>})}
  </form>
  <button onClick={routeChange}>Show List</button>
  

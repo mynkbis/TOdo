@@ -22,11 +22,14 @@ const [newData, setNewData]=useState(getLocalItems);
 
 return (
 
+    
     <div className='listingBox' > 
     
+      <div className='boxlist'>
     <DeleteButton/>
     {newData.map((newVal)=>{return <p>{newVal}</p>})}
     <EditButton/>
+    </div>
     </div>
   )
 }
