@@ -14,22 +14,34 @@ const getLocalItems=()=>{
 
   if(list){
     return JSON.parse(localStorage.getItem('lists'))
-  } else{
+  } else{ 
+   
     return[]  
   }
 }
+
+
 const [newData, setNewData]=useState(getLocalItems);
 
-return (
 
+
+return (
     
     <div className='listingBox' > 
     
-      <div className='boxlist'>
-    <DeleteButton/>
-    {newData.map((newVal)=>{return <p>{newVal}</p>})}
-    <EditButton/>
-    </div>
+    
+    {newData.map((newVal)=>{
+      return <div className='boxlist'>
+      
+      <div key={newVal.id}>{newVal.title}</div> <br/>
+      <DeleteButton setNewData={setNewData} id={newVal.id}/>
+      <EditButton/></div>} 
+      
+    )}
+   
+    
+    
+   
     </div>
   )
 }

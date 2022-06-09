@@ -1,7 +1,10 @@
-.listingBox{
-    
-}
+
 
 .boxlist{
-    border: 1px solid black;
-}
+    border: 1.5px solid rgb(56, 55, 55);
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    }

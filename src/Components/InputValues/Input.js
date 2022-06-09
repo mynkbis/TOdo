@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import "./Input.css"
-import ListPage from '../../pages/ListingPage';
 import { userData, userDispatchData } from '../../context';
 
 
@@ -25,11 +24,22 @@ const HandleEvent=(e)=>{
  // alert("added")
 //  localStorage.setItem("lists", JSON.stringify(items))
      e.preventDefault();
+   
+
+    //  const allData={id:new Date().getTime().toString(),name:items}
+
+    //  console.log(allData)
+
+    if(items && items.length > 0)
      data.push(items)
 
+      const newdata = data.map((item, index) => {
+        return {id: index, title: item}
+      })
      if(data?.length){
-      localStorage.setItem("lists", JSON.stringify(data))
+      localStorage.setItem("lists", JSON.stringify(newdata))
      }
+     
      Setdata(data)
 
     
@@ -50,16 +60,13 @@ let navigate = useNavigate();
   <form className='fieldBox'>
   <input placeholder='Enter todo item..' type="text" value={items} onChange={HandleEvent}></input>
   <button onClick={HandleAdd}>Submit</button>
-
-
- {/* <li>{items}</li>  */}
- {/* {data.map((itemval, id="name+1")=>{return <li key={id+1}>{itemval}</li>})} */}
-
- {data.map((itemval, index)=>{return <ListPage/>})}
+   {/* <li>{items}</li>  */}
+    {/* {data.map((itemval, id="name+1")=>{return <li key={id+1}>{itemval}</li>})} */}
  </form>
- <button onClick={routeChange}>Show List</button>
+ {data.map((itemval, index)=>{return <p key={index}>{itemval}</p>})}
+ {data.length > 0 &&   <button onClick={routeChange} key={data.index}>Show List</button>}
  
-  </div>
+ </div>
   )
 }
 
